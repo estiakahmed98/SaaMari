@@ -1,8 +1,8 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -17,20 +17,28 @@ export default function HomePage() {
               Elevating Health, Wellness & Humanity
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty mb-8 leading-relaxed">
-              A luxury health, wellness & health-tech company building our global flagship. Welcoming visionary partners
-              worldwide to shape the future of human wellbeing.
+              A luxury health, wellness & health-tech company building our
+              global flagship. Welcoming visionary partners worldwide to shape
+              the future of human wellbeing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Discover Our Philosophy
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
-              >
-                Partner With Us
-              </Button>
+              <Link href="/philosophy">
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  Discover Our Philosophy
+                </Button>
+              </Link>
+              <Link href="/partnership">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                >
+                  Partner With Us
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -40,15 +48,19 @@ export default function HomePage() {
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">Our Philosophy</h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
+                  Our Philosophy
+                </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  At SaaMari, we believe in the intersection of luxury and wellness, where science meets humanity. Our
-                  approach is rooted in precision, guided by research, and inspired by the profound potential of human
-                  flourishing.
+                  At SaaMari, we believe in the intersection of luxury and
+                  wellness, where science meets humanity. Our approach is rooted
+                  in precision, guided by research, and inspired by the profound
+                  potential of human flourishing.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  We curate experiences that transcend traditional boundaries, creating pathways to elevated health and
-                  wellness that honor both individual needs and collective wellbeing.
+                  We curate experiences that transcend traditional boundaries,
+                  creating pathways to elevated health and wellness that honor
+                  both individual needs and collective wellbeing.
                 </p>
                 <Link href="/philosophy">
                   <Button
@@ -76,10 +88,13 @@ export default function HomePage() {
         <section className="py-24">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">Our Curations</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
+                Our Curations
+              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Three distinct collections, each crafted with precision and purpose, representing our commitment to
-                excellence in health and wellness.
+                Three distinct collections, each crafted with precision and
+                purpose, representing our commitment to excellence in health and
+                wellness.
               </p>
             </div>
 
@@ -93,13 +108,18 @@ export default function HomePage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">Sanovia</h3>
+                  <h3 className="font-heading text-xl font-semibold mb-3">
+                    Sanovia
+                  </h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Our flagship collection embodying the essence of luxury wellness, where traditional wisdom meets
-                    modern innovation.
+                    Our flagship collection embodying the essence of luxury
+                    wellness, where traditional wisdom meets modern innovation.
                   </p>
                   <Link href="/curations/sanovia">
-                    <Button variant="ghost" className="text-accent hover:text-accent-foreground hover:bg-accent">
+                    <Button
+                      variant="ghost"
+                      className="text-accent hover:text-accent-foreground hover:bg-accent"
+                    >
                       Discover Sanovia →
                     </Button>
                   </Link>
@@ -115,13 +135,18 @@ export default function HomePage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">Mediora</h3>
+                  <h3 className="font-heading text-xl font-semibold mb-3">
+                    Mediora
+                  </h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Advanced health-tech solutions designed for the discerning individual who values both efficacy and
-                    elegance.
+                    Advanced health-tech solutions designed for the discerning
+                    individual who values both efficacy and elegance.
                   </p>
                   <Link href="/curations/mediora">
-                    <Button variant="ghost" className="text-accent hover:text-accent-foreground hover:bg-accent">
+                    <Button
+                      variant="ghost"
+                      className="text-accent hover:text-accent-foreground hover:bg-accent"
+                    >
                       Explore Mediora →
                     </Button>
                   </Link>
@@ -137,13 +162,19 @@ export default function HomePage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">Aurevia</h3>
+                  <h3 className="font-heading text-xl font-semibold mb-3">
+                    Aurevia
+                  </h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    A curated selection of premium wellness essentials that celebrate the harmony between nature and
-                    scientific precision.
+                    A curated selection of premium wellness essentials that
+                    celebrate the harmony between nature and scientific
+                    precision.
                   </p>
                   <Link href="/curations/aurevia">
-                    <Button variant="ghost" className="text-accent hover:text-accent-foreground hover:bg-accent">
+                    <Button
+                      variant="ghost"
+                      className="text-accent hover:text-accent-foreground hover:bg-accent"
+                    >
                       View Aurevia →
                     </Button>
                   </Link>
@@ -171,20 +202,27 @@ export default function HomePage() {
                   Insights & Research
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Our journal explores the intersection of science, wellness, and human potential. Discover
-                  evidence-based insights, thought leadership, and the latest developments in health technology.
+                  Our journal explores the intersection of science, wellness,
+                  and human potential. Discover evidence-based insights, thought
+                  leadership, and the latest developments in health technology.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="border-l-2 border-accent pl-4">
-                    <h3 className="font-semibold text-foreground mb-1">The Future of Personalized Wellness</h3>
+                    <h3 className="font-semibold text-foreground mb-1">
+                      The Future of Personalized Wellness
+                    </h3>
                     <p className="text-sm text-muted-foreground">
-                      Exploring how AI and biotechnology are reshaping individual health journeys
+                      Exploring how AI and biotechnology are reshaping
+                      individual health journeys
                     </p>
                   </div>
                   <div className="border-l-2 border-accent pl-4">
-                    <h3 className="font-semibold text-foreground mb-1">Luxury Meets Science</h3>
+                    <h3 className="font-semibold text-foreground mb-1">
+                      Luxury Meets Science
+                    </h3>
                     <p className="text-sm text-muted-foreground">
-                      The convergence of premium experiences and evidence-based wellness
+                      The convergence of premium experiences and evidence-based
+                      wellness
                     </p>
                   </div>
                 </div>
@@ -209,8 +247,9 @@ export default function HomePage() {
                 Visionary Leadership
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Our leadership team combines decades of experience in health technology, luxury brands, and scientific
-                research to guide SaaMari's mission of elevating human wellness.
+                Our leadership team combines decades of experience in health
+                technology, luxury brands, and scientific research to guide
+                SaaMari's mission of elevating human wellness.
               </p>
             </div>
 
@@ -224,10 +263,15 @@ export default function HomePage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Dr. Sarah Chen</h3>
-                  <p className="text-sm text-accent mb-3">Chief Scientific Officer</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Dr. Sarah Chen
+                  </h3>
+                  <p className="text-sm text-accent mb-3">
+                    Chief Scientific Officer
+                  </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Leading our research initiatives with 15+ years in biotechnology and personalized medicine.
+                    Leading our research initiatives with 15+ years in
+                    biotechnology and personalized medicine.
                   </p>
                 </CardContent>
               </Card>
@@ -241,10 +285,15 @@ export default function HomePage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Marcus Rodriguez</h3>
-                  <p className="text-sm text-accent mb-3">Chief Experience Officer</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Marcus Rodriguez
+                  </h3>
+                  <p className="text-sm text-accent mb-3">
+                    Chief Experience Officer
+                  </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Crafting luxury experiences that seamlessly integrate wellness and technology innovation.
+                    Crafting luxury experiences that seamlessly integrate
+                    wellness and technology innovation.
                   </p>
                 </CardContent>
               </Card>
@@ -258,10 +307,15 @@ export default function HomePage() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Dr. Amara Okafor</h3>
-                  <p className="text-sm text-accent mb-3">Chief Innovation Officer</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Dr. Amara Okafor
+                  </h3>
+                  <p className="text-sm text-accent mb-3">
+                    Chief Innovation Officer
+                  </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Pioneering the future of health-tech with a focus on ethical innovation and global impact.
+                    Pioneering the future of health-tech with a focus on ethical
+                    innovation and global impact.
                   </p>
                 </CardContent>
               </Card>
@@ -284,28 +338,45 @@ export default function HomePage() {
         <section className="py-24 bg-card">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">Global Impact</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
+                Global Impact
+              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Building partnerships and creating meaningful change in the health and wellness landscape worldwide.
+                Building partnerships and creating meaningful change in the
+                health and wellness landscape worldwide.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">25+</div>
-                <p className="text-sm text-muted-foreground">Research Partnerships</p>
+                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
+                  25+
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Research Partnerships
+                </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">12</div>
-                <p className="text-sm text-muted-foreground">Countries Served</p>
+                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
+                  12
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Countries Served
+                </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">50K+</div>
+                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
+                  50K+
+                </div>
                 <p className="text-sm text-muted-foreground">Lives Touched</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">98%</div>
-                <p className="text-sm text-muted-foreground">Partner Satisfaction</p>
+                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
+                  98%
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Partner Satisfaction
+                </p>
               </div>
             </div>
 
@@ -329,11 +400,15 @@ export default function HomePage() {
               Partner With Visionaries
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty mb-8">
-              We seek partners who share our commitment to excellence, innovation, and the elevation of human wellness.
-              Together, we can shape the future of health and wellbeing.
+              We seek partners who share our commitment to excellence,
+              innovation, and the elevation of human wellness. Together, we can
+              shape the future of health and wellbeing.
             </p>
             <Link href="/partner">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
                 Begin Partnership Journey
               </Button>
             </Link>
@@ -343,5 +418,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  );
 }
