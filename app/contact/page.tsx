@@ -1,7 +1,8 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Mail, Phone, Clock, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -34,7 +35,7 @@ export default function ContactPage() {
                   partnership opportunities, we'd love to hear from you.
                 </p>
 
-                <Card>
+                <Card className="border-accent/20">
                   <CardContent className="p-8">
                     <form className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -137,7 +138,7 @@ export default function ContactPage() {
                           className="mt-1 w-4 h-4 text-accent bg-background border-muted rounded focus:ring-accent focus:ring-2"
                         />
                         <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
-                          I agree to the{" "}
+                          I agree to the {" "}
                           <a href="/privacy" className="text-accent hover:text-accent/80 underline">
                             Privacy Policy
                           </a>{" "}
@@ -161,83 +162,98 @@ export default function ContactPage() {
                 </p>
 
                 <div className="space-y-8">
-                  <Card>
+                  {/* General Inquiries */}
+                  <Card className="border-accent/20">
                     <CardContent className="p-6">
                       <h3 className="font-heading text-lg font-semibold mb-4">General Inquiries</h3>
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span className="text-sm">hello@saamari.com</span>
+                          <Mail className="w-5 h-5 text-accent" />
+                          <a href="mailto:hello@saamari.com" className="text-sm hover:underline">hello@saamari.com</a>
                         </div>
                         <div className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span className="text-sm">+1 (555) 123-4567</span>
+                          <Phone className="w-5 h-5 text-accent" />
+                          <a href="tel:+8801729273517" className="text-sm hover:underline">+8801729273517</a>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  {/* Partnership Opportunities */}
+                  <Card className="border-accent/20">
                     <CardContent className="p-6">
                       <h3 className="font-heading text-lg font-semibold mb-4">Partnership Opportunities</h3>
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span className="text-sm">partnerships@saamari.com</span>
+                          <Mail className="w-5 h-5 text-accent" />
+                          <a href="mailto:partnership@gmail.com" className="text-sm hover:underline">partnership@gmail.com</a>
                         </div>
                         <div className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span className="text-sm">+1 (555) 123-4568</span>
+                          <Phone className="w-5 h-5 text-accent" />
+                          <a href="tel:+8801714002135" className="text-sm hover:underline">+8801714002135</a>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  {/* Media & Press */}
+                  <Card className="border-accent/20">
                     <CardContent className="p-6">
                       <h3 className="font-heading text-lg font-semibold mb-4">Media & Press</h3>
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span className="text-sm">press@saamari.com</span>
+                          <Mail className="w-5 h-5 text-accent" />
+                          <a href="mailto:press@saamari.com" className="text-sm hover:underline">press@saamari.com</a>
                         </div>
                         <div className="flex items-center gap-3">
-                          <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center">
-                            <div className="w-2 h-2 bg-accent rounded-full"></div>
-                          </div>
-                          <span className="text-sm">+1 (555) 123-4569</span>
+                          <Phone className="w-5 h-5 text-accent" />
+                          <a href="tel:+8801729273517" className="text-sm hover:underline">+8801729273517</a>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card>
+                  {/* Office Hours */}
+                  <Card className="border-accent/20">
                     <CardContent className="p-6">
                       <h3 className="font-heading text-lg font-semibold mb-4">Office Hours</h3>
                       <div className="space-y-2 text-sm text-muted-foreground">
                         <div className="flex justify-between">
-                          <span>Monday - Friday</span>
+                          <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-accent" /> Monday - Friday</span>
                           <span>9:00 AM - 6:00 PM PST</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>Saturday</span>
+                          <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-accent" /> Saturday</span>
                           <span>10:00 AM - 4:00 PM PST</span>
                         </div>
                         <div className="flex justify-between">
-                          <span>Sunday</span>
+                          <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-accent" /> Sunday</span>
                           <span>Closed</span>
                         </div>
                       </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Socials */}
+                  <Card className="border-accent/20">
+                    <CardContent className="p-6">
+                      <h3 className="font-heading text-lg font-semibold mb-4">Follow Us</h3>
+                      <div className="flex items-center gap-4">
+                        {/* Placeholder links until accounts are opened */}
+                        <a href="#" aria-label="Instagram" className="p-3 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors">
+                          <Instagram className="w-5 h-5 text-accent" />
+                        </a>
+                        <a href="#" aria-label="Facebook" className="p-3 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors">
+                          <Facebook className="w-5 h-5 text-accent" />
+                        </a>
+                        <a href="#" aria-label="LinkedIn" className="p-3 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors">
+                          <Linkedin className="w-5 h-5 text-accent" />
+                        </a>
+                        <a href="#" aria-label="YouTube" className="p-3 rounded-full bg-accent/10 hover:bg-accent/20 transition-colors">
+                          <Youtube className="w-5 h-5 text-accent" />
+                        </a>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-3">We'll update these links once the official accounts are live.</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -257,7 +273,7 @@ export default function ContactPage() {
             </div>
 
             <div className="max-w-4xl mx-auto space-y-6">
-              <Card>
+              <Card className="border-accent/20">
                 <CardContent className="p-6">
                   <h3 className="font-heading text-lg font-semibold mb-3">
                     How does SaaMari's personalized wellness approach work?
@@ -271,7 +287,7 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-accent/20">
                 <CardContent className="p-6">
                   <h3 className="font-heading text-lg font-semibold mb-3">
                     What makes SaaMari different from other wellness companies?
@@ -284,11 +300,9 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-accent/20">
                 <CardContent className="p-6">
-                  <h3 className="font-heading text-lg font-semibold mb-3">
-                    How do I get started with SaaMari's services?
-                  </h3>
+                  <h3 className="font-heading text-lg font-semibold mb-3">How do I get started with SaaMari's services?</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Getting started is simple. Contact us through this form or call our team directly. We'll schedule a
                     confidential consultation to understand your wellness goals and determine the best approach for your
@@ -297,7 +311,7 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-accent/20">
                 <CardContent className="p-6">
                   <h3 className="font-heading text-lg font-semibold mb-3">Do you offer partnership opportunities?</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -312,7 +326,10 @@ export default function ContactPage() {
         </section>
       </main>
 
-      <Footer />
+      {/* Footer wrapper enforces global colors from brand guidance */}
+      <div className="bg-[#50000B] text-[#C2A36A]">
+        <Footer />
+      </div>
     </div>
-  )
+  );
 }
