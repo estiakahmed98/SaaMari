@@ -1,8 +1,8 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function AureviaPage() {
   return (
@@ -21,23 +21,27 @@ export default function AureviaPage() {
                   </Link>
                 </div>
                 <h1 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-balance mb-6">
-                  Aurevia
+                  Aurevia — Beauty, Glow & Lifestyle Wellness
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
                   A curated selection of premium wellness essentials that celebrate the harmony between nature and
                   scientific precision. Crafted for those who appreciate authentic luxury.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    Discover Collection
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
-                  >
-                    Partner Inquiry
-                  </Button>
+                  <Link href="#products">
+                    <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                      Discover Products
+                    </Button>
+                  </Link>
+                  <Link href="/partner">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                    >
+                      Partner Inquiry
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="relative">
@@ -67,102 +71,157 @@ export default function AureviaPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <div className="w-8 h-8 bg-accent rounded-full"></div>
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-4">Natural Ingredients</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Sourced from pristine environments worldwide, our ingredients are selected for their purity,
-                    potency, and sustainable harvesting practices.
-                  </p>
-                </CardContent>
-              </Card>
+              {[
+                {
+                  title: "Natural Ingredients",
+                  desc:
+                    "Sourced from pristine environments worldwide, our ingredients are selected for their purity, potency, and sustainable harvesting practices.",
+                },
+                {
+                  title: "Scientific Precision",
+                  desc:
+                    "Advanced extraction and formulation techniques ensure maximum bioavailability and therapeutic efficacy in every product.",
+                },
+                {
+                  title: "Sustainable Luxury",
+                  desc:
+                    "Committed to environmental stewardship, every aspect of Aurevia reflects our dedication to sustainable and ethical luxury practices.",
+                },
+              ].map((f) => {
+                const iconSrc =
+                  f.title === "Natural Ingredients"
+                    ? "/natural-ingredients.png"
+                    : f.title === "Scientific Precision"
+                    ? "/research.png"
+                    : "/all-inclusive.png";
 
-              <Card className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <div className="w-8 h-8 bg-accent rounded-full"></div>
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-4">Scientific Precision</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Advanced extraction and formulation techniques ensure maximum bioavailability and therapeutic
-                    efficacy in every product.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <div className="w-8 h-8 bg-accent rounded-full"></div>
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-4">Sustainable Luxury</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Committed to environmental stewardship, every aspect of Aurevia reflects our dedication to
-                    sustainable and ethical luxury practices.
-                  </p>
-                </CardContent>
-              </Card>
+                return (
+                  <Card key={f.title} className="group hover:shadow-lg transition-all duration-300 border-accent/20">
+                    <CardContent className="p-8 text-center">
+                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <img src={iconSrc} alt={`${f.title} icon`} className="w-8 h-8 object-contain" />
+                      </div>
+                      <h3 className="font-heading text-xl font-semibold mb-4">{f.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{f.desc}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Product Showcase */}
-        <section className="py-24 bg-card">
+        <section id="products" className="py-24 bg-card">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="text-center mb-16">
               <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">Wellness Essentials</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Discover our carefully curated selection of wellness essentials, each crafted to support your journey
-                toward optimal health and vitality.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
+                Discover our carefully curated selection of wellness essentials, each crafted to support your journey toward optimal health and radiance.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              {/* Collagen */}
+              <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20">
                 <CardContent className="p-8">
                   <div className="aspect-square bg-muted rounded-lg mb-6 overflow-hidden">
                     <img
                       src="/natural-wellness-oils-in-elegant-glass-bottles.png"
-                      alt="Aurevia Essential Oils"
+                      alt="Aurevia Collagen"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">Botanical Essence Collection</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Pure essential oils and botanical extracts sourced from organic farms worldwide, designed to enhance
-                    your daily wellness rituals.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-accent font-medium">Natural Collection</span>
-                    <Button variant="ghost" className="text-accent hover:text-accent-foreground hover:bg-accent">
-                      Learn More →
-                    </Button>
+                  <div className="space-y-4">
+                    <h3 className="font-heading text-2xl font-semibold">Collagen</h3>
+                    <p className="text-sm text-muted-foreground">Generic Name: Hydrolyzed Collagen Peptides with Vitamin C & Hyaluronic Acid</p>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2">Curated Excellence</h4>
+                        <p className="text-muted-foreground">
+                          Handpicked from world-class collagen innovators, merging clinical science with luxury beauty.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2">Why Choose from SaaMari Aurevia</h4>
+                        <p className="text-muted-foreground">
+                          Beauty-from-within solution trusted for skin, hair, nails, and joint health.
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">Key Benefits</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <li>Improves skin elasticity and hydration</li>
+                        <li>Strengthens hair and nails</li>
+                        <li>Supports joint mobility and bone health</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">How It Works</h4>
+                      <p className="text-muted-foreground">
+                        Hydrolyzed collagen peptides are absorbed efficiently, stimulating natural collagen production. Vitamin C boosts synthesis, while hyaluronic acid locks in hydration.
+                      </p>
+                    </div>
+                    <p className="text-xs text-muted-foreground/80 italic">
+                      Disclaimer: This is a dietary supplement and not intended to diagnose, treat, cure, or prevent any disease or health condition.
+                    </p>
+                    <div className="flex items-center gap-3 pt-2">
+                      <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Learn More</Button>
+                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">Add to Cart</Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              {/* Glutathione */}
+              <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20">
                 <CardContent className="p-8">
                   <div className="aspect-square bg-muted rounded-lg mb-6 overflow-hidden">
                     <img
                       src="/premium-herbal-supplements-in-sustainable-packagin.png"
-                      alt="Aurevia Herbal Supplements"
+                      alt="Aurevia Glutathione"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">Adaptogenic Wellness Series</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Scientifically formulated adaptogenic blends that support stress resilience, energy balance, and
-                    overall vitality using traditional herbal wisdom.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-accent font-medium">Herbal Series</span>
-                    <Button variant="ghost" className="text-accent hover:text-accent-foreground hover:bg-accent">
-                      Learn More →
-                    </Button>
+                  <div className="space-y-4">
+                    <h3 className="font-heading text-2xl font-semibold">Glutathione</h3>
+                    <p className="text-sm text-muted-foreground">Generic Name: L-Glutathione Reduced + Vitamin C Complex</p>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2">Curated Excellence</h4>
+                        <p className="text-muted-foreground">
+                          Curated from leading global antioxidant specialists, ensuring safety and clinical validation.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2">Why Choose from SaaMari Aurevia</h4>
+                        <p className="text-muted-foreground">
+                          Premium detoxification and glow enhancer backed by science.
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">Key Benefits</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <li>Brightens skin tone and radiance</li>
+                        <li>Strengthens immune defense</li>
+                        <li>Protects cells from oxidative stress</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">How It Works</h4>
+                      <p className="text-muted-foreground">
+                        Glutathione acts as the body’s master antioxidant, supporting liver detoxification and recycling free radicals. Vitamin C enhances glutathione activity and absorption.
+                      </p>
+                    </div>
+                    <p className="text-xs text-muted-foreground/80 italic">
+                      Disclaimer: This is a dietary supplement and not intended to diagnose, treat, cure, or prevent any disease or health condition.
+                    </p>
+                    <div className="flex items-center gap-3 pt-2">
+                      <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Learn More</Button>
+                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">Add to Cart</Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -177,8 +236,7 @@ export default function AureviaPage() {
               Embrace Natural Luxury
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty mb-8">
-              Join our network of wellness partners and bring the Aurevia experience to your community. Discover how
-              natural luxury can enhance your wellness offerings.
+              Join our network of wellness partners and bring the Aurevia experience to your community. Discover how natural luxury can enhance your wellness offerings.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/partner">
@@ -200,7 +258,10 @@ export default function AureviaPage() {
         </section>
       </main>
 
-      <Footer />
+      {/* Footer wrapper enforces global colors from brand guidance */}
+      <div className="bg-[#50000B] text-[#C2A36A]">
+        <Footer />
+      </div>
     </div>
-  )
+  );
 }

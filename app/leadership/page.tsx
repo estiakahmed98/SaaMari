@@ -188,7 +188,7 @@ export default function LeadershipPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"></div>
+                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"> <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-full" src="/David_Kim.png" alt="David Kim" /></div>
                   <h3 className="font-heading text-lg font-semibold mb-1">Prof. David Kim</h3>
                   <p className="text-sm text-accent mb-2">Harvard Medical School</p>
                   <p className="text-xs text-muted-foreground">Longevity Research</p>
@@ -197,7 +197,7 @@ export default function LeadershipPage() {
 
               <Card className="group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"></div>
+                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"> <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-full" src="/Maria_Santos.png" alt="Maria Santos" /></div>
                   <h3 className="font-heading text-lg font-semibold mb-1">Maria Santos</h3>
                   <p className="text-sm text-accent mb-2">Former CEO, Wellness Corp</p>
                   <p className="text-xs text-muted-foreground">Industry Leadership</p>
@@ -206,7 +206,7 @@ export default function LeadershipPage() {
 
               <Card className="group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"></div>
+                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"> <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-full" src="/Dr._Robert_Chen.png" alt="Robert Chen" /></div>
                   <h3 className="font-heading text-lg font-semibold mb-1">Dr. Robert Chen</h3>
                   <p className="text-sm text-accent mb-2">Mayo Clinic</p>
                   <p className="text-xs text-muted-foreground">Precision Medicine</p>
@@ -215,7 +215,7 @@ export default function LeadershipPage() {
 
               <Card className="group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"></div>
+                  <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"> <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-full" src="/Sophie_Laurent.png" alt="Sophie Laurent" /></div>
                   <h3 className="font-heading text-lg font-semibold mb-1">Sophie Laurent</h3>
                   <p className="text-sm text-accent mb-2">LVMH Group</p>
                   <p className="text-xs text-muted-foreground">Luxury Strategy</p>

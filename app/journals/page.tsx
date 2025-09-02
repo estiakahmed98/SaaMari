@@ -84,7 +84,7 @@ export default function JournalsPage() {
                 <CardContent className="p-6">
                   <div className="aspect-[4/3] bg-muted rounded-lg mb-4 overflow-hidden">
                     <img
-                      src="/luxury-meets-science-wellness-laboratory.png"
+                      src="/elegant-wellness-app-interface-on-premium-tablet.png"
                       alt="Luxury meets science article"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />

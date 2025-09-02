@@ -1,8 +1,9 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { Watch, HeartPulse, Activity, Brain, Gauge, Stethoscope, BellRing, ShieldCheck } from "lucide-react";
 
 export default function MedioraPage() {
   return (
@@ -21,26 +22,30 @@ export default function MedioraPage() {
                   </Link>
                 </div>
                 <h1 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-balance mb-6">
-                  Mediora
+                  Mediora — Future Health‑Tech & Connected Care
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground text-pretty mb-8 leading-relaxed">
-                  Advanced health-tech solutions designed for the discerning individual who values both efficacy and
-                  elegance. Where cutting-edge technology meets sophisticated design.
+                  Advanced health‑tech solutions where cutting‑edge sensors, AI insights, and elegant design come together.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    Explore Technology
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
-                  >
-                    Partner Inquiry
-                  </Button>
+                  <Link href="#products">
+                    <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                      Explore Technology
+                    </Button>
+                  </Link>
+                  <Link href="/partner">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                    >
+                      Partner Inquiry
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="relative">
+                {/* Using existing hero image path */}
                 <div className="aspect-[4/5] bg-muted rounded-lg overflow-hidden">
                   <img
                     src="/sophisticated-mediora-health-tech-products-with-cl.png"
@@ -57,114 +62,155 @@ export default function MedioraPage() {
         <section className="py-24">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
-                Health Technology Elevated
-              </h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">Health Technology Elevated</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Mediora represents the convergence of advanced health monitoring, AI-driven insights, and elegant design
-                philosophy.
+                Mediora embodies precision monitoring, AI‑driven guidance, and human‑centric industrial design.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <div className="w-8 h-8 bg-accent rounded-full"></div>
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-4">Precision Monitoring</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Advanced sensors and algorithms provide real-time health insights with medical-grade accuracy and
-                    consumer-friendly interfaces.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <div className="w-8 h-8 bg-accent rounded-full"></div>
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-4">AI-Driven Insights</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Machine learning algorithms analyze your health data to provide personalized recommendations and
-                    predictive wellness insights.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <div className="w-8 h-8 bg-accent rounded-full"></div>
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-4">Elegant Design</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Every device combines sophisticated aesthetics with intuitive functionality, seamlessly integrating
-                    into your luxury lifestyle.
-                  </p>
-                </CardContent>
-              </Card>
+              {[
+                { title: "Precision Monitoring", Icon: HeartPulse, desc: "Advanced sensors and algorithms provide real‑time health insights with consumer‑friendly interfaces." },
+                { title: "AI‑Driven Insights", Icon: Brain, desc: "Machine learning turns continuous data into daily scores, trends, and proactive recommendations." },
+                { title: "Elegant Design", Icon: Activity, desc: "Sophisticated aesthetics meet intuitive UX for seamless integration into your lifestyle." },
+              ].map(({ title, Icon, desc }) => (
+                <Card key={title} className="group hover:shadow-lg transition-all duration-300 border-accent/20">
+                  <CardContent className="p-8 text-center">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-accent" />
+                    </div>
+                    <h3 className="font-heading text-xl font-semibold mb-4">{title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{desc}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Product Showcase */}
-        <section className="py-24 bg-card">
+        <section id="products" className="py-24 bg-card">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
-                Innovation Portfolio
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Discover our suite of health-tech solutions, each designed to provide unprecedented insights into your
-                wellness journey.
+              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">Innovation Portfolio</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
+                Discover connected devices integrated into the Mediora ecosystem—delivering proactive, preventive care.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              {/* Smart Health Watch */}
+              <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20">
                 <CardContent className="p-8">
+                  {/* Using existing image path from your project */}
                   <div className="aspect-square bg-muted rounded-lg mb-6 overflow-hidden">
                     <img
                       src="/sleek-health-monitoring-device-with-modern-design.png"
-                      alt="Mediora Health Monitor"
+                      alt="Mediora Smart Health Watch"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">Advanced Health Monitor</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Continuous health monitoring with AI-powered analytics, providing real-time insights into your
-                    cardiovascular, metabolic, and sleep patterns.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-accent font-medium">Core Technology</span>
-                    <Button variant="ghost" className="text-accent hover:text-accent-foreground hover:bg-accent">
-                      Learn More →
-                    </Button>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Watch className="w-5 h-5 text-accent" />
+                      <h3 className="font-heading text-2xl font-semibold">Smart Health Watch</h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Generic Name: Wearable Smart Watch with ECG, SpO₂, Heart Rate, Sleep & Stress Tracking
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2 flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent" /> Curated Excellence</h4>
+                        <p className="text-muted-foreground">Sourced from global health‑tech leaders, integrated into SaaMari’s Mediora ecosystem.</p>
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2 flex items-center gap-2"><Stethoscope className="w-4 h-4 text-accent" /> Why Choose from SaaMari Mediora</h4>
+                        <p className="text-muted-foreground">Transforms a lifestyle wearable into a true health companion.</p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">Key Benefits</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <li className="flex items-center gap-2"><HeartPulse className="w-4 h-4 text-accent" /> Tracks heart rate, oxygen levels, stress, and sleep</li>
+                        <li className="flex items-center gap-2"><Activity className="w-4 h-4 text-accent" /> Records ECGs for early cardiac insights</li>
+                        <li className="flex items-center gap-2"><BellRing className="w-4 h-4 text-accent" /> Promotes proactive, preventive health awareness</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">How It Works</h4>
+                      <p className="text-muted-foreground">
+                        Advanced biosensors continuously capture vital data, syncing with the Mediora App to generate AI insights, daily health scores, and optional teleconsult integration.
+                      </p>
+                    </div>
+
+                    <p className="text-xs text-muted-foreground/80 italic">
+                      Disclaimer: This is a health‑tech monitoring device and not intended to replace professional medical diagnosis or treatment.
+                    </p>
+
+                    <div className="flex items-center gap-3 pt-2">
+                      <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Learn More</Button>
+                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">Add to Cart</Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              {/* Blood Pressure Monitor */}
+              <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20">
                 <CardContent className="p-8">
+                  {/* Using existing image path from your project */}
                   <div className="aspect-square bg-muted rounded-lg mb-6 overflow-hidden">
                     <img
                       src="/elegant-wellness-app-interface-on-premium-tablet.png"
-                      alt="Mediora Wellness Platform"
+                      alt="Mediora Blood Pressure Monitor"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-3">Wellness Intelligence Platform</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Comprehensive wellness dashboard that integrates all your health data, providing personalized
-                    recommendations and progress tracking.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-accent font-medium">Digital Platform</span>
-                    <Button variant="ghost" className="text-accent hover:text-accent-foreground hover:bg-accent">
-                      Learn More →
-                    </Button>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Gauge className="w-5 h-5 text-accent" />
+                      <h3 className="font-heading text-2xl font-semibold">Blood Pressure Monitor</h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Generic Name: Digital Smart Blood Pressure Monitor with Bluetooth Connectivity</p>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2 flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent" /> Curated Excellence</h4>
+                        <p className="text-muted-foreground">Curated from trusted global device manufacturers, enhanced with SaaMari Mediora’s SaaS platform.</p>
+                      </div>
+                      <div>
+                        <h4 className="font-heading font-semibold mb-2 flex items-center gap-2"><Stethoscope className="w-4 h-4 text-accent" /> Why Choose from SaaMari Mediora</h4>
+                        <p className="text-muted-foreground">Beyond a device — a connected chronic care solution.</p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">Key Benefits</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                        <li className="flex items-center gap-2"><Gauge className="w-4 h-4 text-accent" /> Provides accurate, convenient home BP tracking</li>
+                        <li className="flex items-center gap-2"><Activity className="w-4 h-4 text-accent" /> Generates monthly reports for physicians</li>
+                        <li className="flex items-center gap-2"><BellRing className="w-4 h-4 text-accent" /> AI alerts for hypertension risk</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-heading font-semibold mb-2">How It Works</h4>
+                      <p className="text-muted-foreground">
+                        The digital cuff inflates automatically and records systolic/diastolic readings. Data syncs to the Mediora App where AI generates personalized trends, with optional doctor access.
+                      </p>
+                    </div>
+
+                    <p className="text-xs text-muted-foreground/80 italic">
+                      Disclaimer: This device supports self‑monitoring and is not a substitute for professional medical diagnosis or treatment.
+                    </p>
+
+                    <div className="flex items-center gap-3 pt-2">
+                      <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Learn More</Button>
+                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">Add to Cart</Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -175,18 +221,13 @@ export default function MedioraPage() {
         {/* Partnership CTA */}
         <section className="py-24">
           <div className="container mx-auto max-w-screen-xl px-4 text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
-              Transform Healthcare Delivery
-            </h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">Transform Healthcare Delivery</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty mb-8">
-              Partner with Mediora to bring cutting-edge health technology to your practice or organization. Elevate
-              patient care with our sophisticated monitoring solutions.
+              Partner with Mediora to bring connected care to your practice or organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/partner">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  Partner With Us
-                </Button>
+                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">Partner With Us</Button>
               </Link>
               <Link href="/contact">
                 <Button
@@ -202,7 +243,10 @@ export default function MedioraPage() {
         </section>
       </main>
 
-      <Footer />
+      {/* Footer wrapper enforces global colors from brand guidance */}
+      <div className="bg-[#50000B] text-[#C2A36A]">
+        <Footer />
+      </div>
     </div>
-  )
+  );
 }
