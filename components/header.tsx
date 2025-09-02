@@ -2,12 +2,16 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronDown } from "lucide-react"
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileCurationsOpen, setMobileCurationsOpen] = useState(false)
+  const pathname = usePathname()
+  const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/")
+  const isSection = (section: string) => pathname.startsWith(section)
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -21,7 +25,12 @@ export function Header() {
         <nav className="hidden md:flex items-center space-x-8">
           <Link
             href="/philosophy"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            aria-current={isActive("/philosophy") ? "page" : undefined}
+            className={`text-sm font-medium transition-colors ${
+              isActive("/philosophy")
+                ? "text-accent"
+                : "text-foreground/80 hover:text-foreground"
+            }`}
           >
             Philosophy
           </Link>
@@ -29,9 +38,11 @@ export function Header() {
           {/* Desktop dropdown */}
           <div className="relative group">
             <button
-              className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                isSection("/curations") ? "text-accent" : "text-foreground/80 hover:text-foreground"
+              }`}
               aria-haspopup="true"
-              aria-expanded="false"
+              aria-expanded={isSection("/curations")}
             >
               Curations
               <ChevronDown className="h-4 w-4" />
@@ -39,19 +50,34 @@ export function Header() {
             <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-200">
               <Link
                 href="/curations/sanovia"
-                className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-muted"
+                aria-current={isActive("/curations/sanovia") ? "page" : undefined}
+                className={`block px-4 py-2 text-sm hover:bg-muted ${
+                  isActive("/curations/sanovia")
+                    ? "text-accent"
+                    : "text-foreground/80 hover:text-foreground"
+                }`}
               >
                 Sanovia
               </Link>
               <Link
                 href="/curations/mediora"
-                className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-muted"
+                aria-current={isActive("/curations/mediora") ? "page" : undefined}
+                className={`block px-4 py-2 text-sm hover:bg-muted ${
+                  isActive("/curations/mediora")
+                    ? "text-accent"
+                    : "text-foreground/80 hover:text-foreground"
+                }`}
               >
                 Mediora
               </Link>
               <Link
                 href="/curations/aurevia"
-                className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-muted"
+                aria-current={isActive("/curations/aurevia") ? "page" : undefined}
+                className={`block px-4 py-2 text-sm hover:bg-muted ${
+                  isActive("/curations/aurevia")
+                    ? "text-accent"
+                    : "text-foreground/80 hover:text-foreground"
+                }`}
               >
                 Aurevia
               </Link>
@@ -60,25 +86,45 @@ export function Header() {
 
           <Link
             href="/journals"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            aria-current={isActive("/journals") ? "page" : undefined}
+            className={`text-sm font-medium transition-colors ${
+              isActive("/journals")
+                ? "text-accent"
+                : "text-foreground/80 hover:text-foreground"
+            }`}
           >
             Journals
           </Link>
           <Link
             href="/leadership"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            aria-current={isActive("/leadership") ? "page" : undefined}
+            className={`text-sm font-medium transition-colors ${
+              isActive("/leadership")
+                ? "text-accent"
+                : "text-foreground/80 hover:text-foreground"
+            }`}
           >
             Leadership
           </Link>
           <Link
             href="/impact"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            aria-current={isActive("/impact") ? "page" : undefined}
+            className={`text-sm font-medium transition-colors ${
+              isActive("/impact")
+                ? "text-accent"
+                : "text-foreground/80 hover:text-foreground"
+            }`}
           >
             Impact
           </Link>
           <Link
             href="/contact"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            aria-current={isActive("/contact") ? "page" : undefined}
+            className={`text-sm font-medium transition-colors ${
+              isActive("/contact")
+                ? "text-accent"
+                : "text-foreground/80 hover:text-foreground"
+            }`}
           >
             Contact
           </Link>
@@ -114,7 +160,10 @@ export function Header() {
         <div className="px-4 py-3 space-y-1">
           <Link
             href="/philosophy"
-            className="block rounded-md px-3 py-2 text-sm font-medium text-foreground/90 hover:bg-muted/60"
+            aria-current={isActive("/philosophy") ? "page" : undefined}
+            className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
+              isActive("/philosophy") ? "text-accent" : "text-foreground/90"
+            }`}
             onClick={() => setMobileOpen(false)}
           >
             Philosophy
@@ -123,7 +172,9 @@ export function Header() {
           {/* Mobile Curations (accordion) */}
           <div className="rounded-md">
             <button
-              className="w-full flex items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-foreground/90 hover:bg-muted/60"
+              className={`w-full flex items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium hover:bg-muted/60 ${
+                isSection("/curations") ? "text-accent" : "text-foreground/90"
+              }`}
               aria-expanded={mobileCurationsOpen}
               onClick={() => setMobileCurationsOpen((o) => !o)}
             >
@@ -139,21 +190,30 @@ export function Header() {
             >
               <Link
                 href="/curations/sanovia"
-                className="block rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-muted/60"
+                aria-current={isActive("/curations/sanovia") ? "page" : undefined}
+                className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
+                  isActive("/curations/sanovia") ? "text-accent" : "text-foreground/80"
+                }`}
                 onClick={() => setMobileOpen(false)}
               >
                 Sanovia
               </Link>
               <Link
                 href="/curations/mediora"
-                className="block rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-muted/60"
+                aria-current={isActive("/curations/mediora") ? "page" : undefined}
+                className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
+                  isActive("/curations/mediora") ? "text-accent" : "text-foreground/80"
+                }`}
                 onClick={() => setMobileOpen(false)}
               >
                 Mediora
               </Link>
               <Link
                 href="/curations/aurevia"
-                className="block rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-muted/60"
+                aria-current={isActive("/curations/aurevia") ? "page" : undefined}
+                className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
+                  isActive("/curations/aurevia") ? "text-accent" : "text-foreground/80"
+                }`}
                 onClick={() => setMobileOpen(false)}
               >
                 Aurevia
@@ -163,28 +223,40 @@ export function Header() {
 
           <Link
             href="/journals"
-            className="block rounded-md px-3 py-2 text-sm font-medium text-foreground/90 hover:bg-muted/60"
+            aria-current={isActive("/journals") ? "page" : undefined}
+            className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
+              isActive("/journals") ? "text-accent" : "text-foreground/90"
+            }`}
             onClick={() => setMobileOpen(false)}
           >
             Journals
           </Link>
           <Link
             href="/leadership"
-            className="block rounded-md px-3 py-2 text-sm font-medium text-foreground/90 hover:bg-muted/60"
+            aria-current={isActive("/leadership") ? "page" : undefined}
+            className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
+              isActive("/leadership") ? "text-accent" : "text-foreground/90"
+            }`}
             onClick={() => setMobileOpen(false)}
           >
             Leadership
           </Link>
           <Link
             href="/impact"
-            className="block rounded-md px-3 py-2 text-sm font-medium text-foreground/90 hover:bg-muted/60"
+            aria-current={isActive("/impact") ? "page" : undefined}
+            className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
+              isActive("/impact") ? "text-accent" : "text-foreground/90"
+            }`}
             onClick={() => setMobileOpen(false)}
           >
             Impact
           </Link>
           <Link
             href="/contact"
-            className="block rounded-md px-3 py-2 text-sm font-medium text-foreground/90 hover:bg-muted/60"
+            aria-current={isActive("/contact") ? "page" : undefined}
+            className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
+              isActive("/contact") ? "text-accent" : "text-foreground/90"
+            }`}
             onClick={() => setMobileOpen(false)}
           >
             Contact

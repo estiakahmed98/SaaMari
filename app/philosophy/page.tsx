@@ -27,35 +27,40 @@ export default function PhilosophyPage() {
         <section className="py-24 bg-card">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              {/* Mission */}
               <div>
                 <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
                   Our Mission
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  To elevate human wellness through meticulously curated
-                  experiences that harmonize scientific innovation with timeless
-                  wisdom. We create pathways to optimal health that honor both
-                  individual needs and collective wellbeing.
+                  Transforming health and wellness into a universal standard of
+                  excellence.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Every product, service, and interaction is designed to foster
-                  profound transformation—empowering individuals to thrive in
-                  mind, body, and spirit.
+                  Our mission is to set a new global benchmark in wellness by
+                  delivering products, services, and experiences that combine
+                  scientific integrity, sustainable practices, and human
+                  compassion. We empower individuals and communities to thrive
+                  in body, mind, and spirit, while building a future where
+                  health is recognized as both a personal right and a collective
+                  responsibility.
                 </p>
               </div>
+
+              {/* Vision */}
               <div>
                 <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
                   Our Vision
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  We envision a world where luxury wellness is accessible,
-                  personalized, and scientifically validated—where technology
-                  enhances human connection rather than replacing it.
+                  Redefining global wellness with trust, science, and human
+                  care.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  By 2030, we aim to establish a global ecosystem of wellness
-                  that seamlessly integrates cutting-edge health technology with
-                  the art of human care.
+                  We aim to become the world’s most trusted platform for health,
+                  wellness, and health‑tech—where science, innovation, and human
+                  care converge to create lasting impact, leaving every life and
+                  community better than we found them.
                 </p>
               </div>
             </div>
@@ -371,7 +376,10 @@ export default function PhilosophyPage() {
         </section>
       </main>
 
-      <Footer />
+      {/* Footer wrapper enforces global colors from brand guidance */}
+      <div className="bg-[#50000B] text-[#C2A36A]">
+        <Footer />
+      </div>
     </div>
   );
 }

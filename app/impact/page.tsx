@@ -1,7 +1,8 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { BsAward } from "react-icons/bs";
 
 export default function ImpactPage() {
   return (
@@ -16,8 +17,9 @@ export default function ImpactPage() {
               Transforming Wellness
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty mb-8 leading-relaxed">
-              Discover how SaaMari is revolutionizing the wellness industry through scientific innovation, luxury
-              experiences, and meaningful partnerships that create lasting impact.
+              Discover how SaaMari is revolutionizing the wellness industry
+              through scientific innovation, luxury experiences, and meaningful
+              partnerships that create lasting impact.
             </p>
           </div>
         </section>
@@ -26,42 +28,67 @@ export default function ImpactPage() {
         <section className="py-24">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="mb-16 text-center">
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">Our Impact by Numbers</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">
+                Our Impact by Numbers
+              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Measurable results that demonstrate our commitment to advancing wellness science and luxury experiences.
+                Measurable results that demonstrate our commitment to advancing
+                wellness science and luxury experiences.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               <Card className="text-center p-8 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
-                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">50+</div>
-                  <div className="text-lg font-medium mb-2">Research Publications</div>
-                  <div className="text-sm text-muted-foreground">Peer-reviewed studies advancing wellness science</div>
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    50+
+                  </div>
+                  <div className="text-lg font-medium mb-2">
+                    Research Publications
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Peer-reviewed studies advancing wellness science
+                  </div>
                 </CardContent>
               </Card>
 
               <Card className="text-center p-8 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
-                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">10K+</div>
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    10K+
+                  </div>
                   <div className="text-lg font-medium mb-2">Lives Enhanced</div>
-                  <div className="text-sm text-muted-foreground">Individuals experiencing personalized wellness</div>
+                  <div className="text-sm text-muted-foreground">
+                    Individuals experiencing personalized wellness
+                  </div>
                 </CardContent>
               </Card>
 
               <Card className="text-center p-8 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
-                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">25</div>
-                  <div className="text-lg font-medium mb-2">Global Partners</div>
-                  <div className="text-sm text-muted-foreground">Leading institutions and luxury brands</div>
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    25
+                  </div>
+                  <div className="text-lg font-medium mb-2">
+                    Global Partners
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Leading institutions and luxury brands
+                  </div>
                 </CardContent>
               </Card>
 
               <Card className="text-center p-8 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
-                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">98%</div>
-                  <div className="text-lg font-medium mb-2">Client Satisfaction</div>
-                  <div className="text-sm text-muted-foreground">Exceptional experiences and measurable results</div>
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    98%
+                  </div>
+                  <div className="text-lg font-medium mb-2">
+                    Client Satisfaction
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Exceptional experiences and measurable results
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -76,20 +103,26 @@ export default function ImpactPage() {
                 Scientific Leadership
               </h2>
               <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto text-pretty">
-                Our research initiatives are advancing the field of personalized wellness and luxury health experiences.
+                Our research initiatives are advancing the field of personalized
+                wellness and luxury health experiences.
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
-                <h3 className="font-heading text-2xl font-semibold mb-6">Breakthrough Research</h3>
+                <h3 className="font-heading text-2xl font-semibold mb-6">
+                  Breakthrough Research
+                </h3>
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <h4 className="font-medium mb-2">AI-Driven Personalization</h4>
+                      <h4 className="font-medium mb-2">
+                        AI-Driven Personalization
+                      </h4>
                       <p className="text-sm text-muted-foreground">
-                        Pioneering algorithms that predict individual wellness responses with 94% accuracy
+                        Pioneering algorithms that predict individual wellness
+                        responses with 94% accuracy
                       </p>
                     </div>
                   </div>
@@ -98,16 +131,20 @@ export default function ImpactPage() {
                     <div>
                       <h4 className="font-medium mb-2">Biomarker Innovation</h4>
                       <p className="text-sm text-muted-foreground">
-                        Developing non-invasive monitoring technologies for real-time health optimization
+                        Developing non-invasive monitoring technologies for
+                        real-time health optimization
                       </p>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <h4 className="font-medium mb-2">Luxury Wellness Standards</h4>
+                      <h4 className="font-medium mb-2">
+                        Luxury Wellness Standards
+                      </h4>
                       <p className="text-sm text-muted-foreground">
-                        Establishing new benchmarks for premium wellness experiences and outcomes
+                        Establishing new benchmarks for premium wellness
+                        experiences and outcomes
                       </p>
                     </div>
                   </div>
@@ -115,7 +152,7 @@ export default function ImpactPage() {
               </div>
               <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
                 <img
-                  src="/cutting-edge-research-laboratory-wellness.png"
+                  src="/research_laboratory.jpg"
                   alt="Research laboratory"
                   className="w-full h-full object-cover"
                 />
@@ -128,22 +165,30 @@ export default function ImpactPage() {
         <section className="py-24">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="mb-16 text-center">
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">Industry Recognition</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">
+                Industry Recognition
+              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Our innovations and leadership have been recognized by leading industry organizations and publications.
+                Our innovations and leadership have been recognized by leading
+                industry organizations and publications.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="p-8 text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-accent rounded"></div>
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                   <img src="/brand.png" alt="Innovation Award" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Innovation Award 2024</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Global Wellness Institute</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Innovation Award 2024
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Global Wellness Institute
+                  </p>
                   <p className="text-xs text-muted-foreground">
-                    Recognized for breakthrough AI-driven personalization platform
+                    Recognized for breakthrough AI-driven personalization
+                    platform
                   </p>
                 </CardContent>
               </Card>
@@ -151,10 +196,14 @@ export default function ImpactPage() {
               <Card className="p-8 text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-accent rounded"></div>
+                    <img src="/all-inclusive.png" alt="Luxury Excellence" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Luxury Excellence</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Luxury Lifestyle Awards</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Luxury Excellence
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Luxury Lifestyle Awards
+                  </p>
                   <p className="text-xs text-muted-foreground">
                     Best Luxury Wellness Experience for premium personalization
                   </p>
@@ -164,32 +213,48 @@ export default function ImpactPage() {
               <Card className="p-8 text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-accent rounded"></div>
+                    <img src="/scientific-research.png" alt="Nature Biotechnology" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Scientific Excellence</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Nature Biotechnology</p>
-                  <p className="text-xs text-muted-foreground">Featured research on precision wellness methodologies</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Scientific Excellence
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Nature Biotechnology
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Featured research on precision wellness methodologies
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="p-8 text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-accent rounded"></div>
+                   <img src="/invent.png" alt="Technology Pioneer" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Technology Pioneer</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Forbes Health Tech</p>
-                  <p className="text-xs text-muted-foreground">Named among top 10 health tech innovators of 2024</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Technology Pioneer
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Forbes Health Tech
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Named among top 10 health tech innovators of 2024
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="p-8 text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-accent rounded"></div>
+                    <img src="/sustainability.png" alt="Sustainability Leader" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Sustainability Leader</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Green Luxury Awards</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Sustainability Leader
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Green Luxury Awards
+                  </p>
                   <p className="text-xs text-muted-foreground">
                     Outstanding commitment to sustainable luxury practices
                   </p>
@@ -199,10 +264,14 @@ export default function ImpactPage() {
               <Card className="p-8 text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-accent rounded"></div>
+                    <img src="/experience.png" alt="Client Excellence" />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">Client Excellence</h3>
-                  <p className="text-sm text-muted-foreground mb-4">Luxury Service Awards</p>
+                  <h3 className="font-heading text-lg font-semibold mb-2">
+                    Client Excellence
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Luxury Service Awards
+                  </p>
                   <p className="text-xs text-muted-foreground">
                     Highest client satisfaction in luxury wellness category
                   </p>
@@ -216,41 +285,50 @@ export default function ImpactPage() {
         <section className="py-24 bg-card">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="mb-16 text-center">
-              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">Strategic Partnerships</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">
+                Strategic Partnerships
+              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Collaborating with world-class institutions and luxury brands to advance wellness innovation.
+                Collaborating with world-class institutions and luxury brands to
+                advance wellness innovation.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="font-heading text-2xl font-semibold mb-6">Global Collaborations</h3>
+                <h3 className="font-heading text-2xl font-semibold mb-6">
+                  Global Collaborations
+                </h3>
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-medium mb-2">Leading Medical Institutions</h4>
+                    <h4 className="font-medium mb-2">
+                      Leading Medical Institutions
+                    </h4>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Partnerships with Mayo Clinic, Stanford Medicine, and Harvard Medical School for clinical research
-                      and validation.
+                      Partnerships with Mayo Clinic, Stanford Medicine, and
+                      Harvard Medical School for clinical research and
+                      validation.
                     </p>
                   </div>
                   <div>
                     <h4 className="font-medium mb-2">Luxury Brand Alliances</h4>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Strategic collaborations with premium hospitality and luxury goods brands to deliver exceptional
-                      experiences.
+                      Strategic collaborations with premium hospitality and
+                      luxury goods brands to deliver exceptional experiences.
                     </p>
                   </div>
                   <div>
                     <h4 className="font-medium mb-2">Technology Partners</h4>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Integration with leading health technology platforms and AI research institutions.
+                      Integration with leading health technology platforms and
+                      AI research institutions.
                     </p>
                   </div>
                 </div>
               </div>
               <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
                 <img
-                  src="/global-partnership-network-visualization.png"
+                  src="/global_partnerships.jpg"
                   alt="Global partnerships"
                   className="w-full h-full object-cover"
                 />
@@ -266,15 +344,18 @@ export default function ImpactPage() {
               Shaping Tomorrow's Wellness
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty mb-8">
-              Our vision extends beyond today's innovations. We're building the foundation for a future where
-              personalized wellness and luxury experiences converge to unlock human potential.
+              Our vision extends beyond today's innovations. We're building the
+              foundation for a future where personalized wellness and luxury
+              experiences converge to unlock human potential.
             </p>
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Partner With Us</Button>
+            <Button className="bg-accent text-white hover:bg-accent/90">
+              Partner With Us
+            </Button>
           </div>
         </section>
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }
