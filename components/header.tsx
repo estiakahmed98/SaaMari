@@ -5,6 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Comfortaa } from "next/font/google";
+
+const comfortaa = Comfortaa({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,7 +26,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4">
         {/* Brand */}
         <Link href="/" className="flex items-center space-x-2">
-          <span className="font-heading text-2xl font-bold tracking-tight">
+          <span className={`${comfortaa.className} text-2xl font-normal tracking-tight`}>
             Saamari
           </span>
         </Link>

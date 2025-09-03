@@ -25,7 +25,7 @@ export default function HomePage() {
               <Link href="/philosophy">
                 <Button
                   size="lg"
-                  className="bg-[#50000B] text-[#C2A36A]"
+                  className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100"
                 >
                   Discover Our Philosophy
                 </Button>
@@ -145,12 +145,12 @@ export default function HomePage() {
                   <Link href="/curations/mediora">
                     <Button
                       variant="ghost"
-                      className="text-accent hover:text-accent-foreground hover:bg-accent"
+                      className="text-[#C2A36A] hover:text-[#C2A36A] hover:bg-[#50000B]"
                     >
                       Explore Mediora →
                     </Button>
                   </Link>
-                </CardContent>
+                </CardContent>  
               </Card>
 
               <Card className="group hover:shadow-lg transition-all duration-300">
@@ -173,7 +173,7 @@ export default function HomePage() {
                   <Link href="/curations/aurevia">
                     <Button
                       variant="ghost"
-                      className="text-accent hover:text-accent-foreground hover:bg-accent"
+                      className="text-[#C2A36A] hover:text-[#C2A36A] hover:bg-[#50000B]"
                     >
                       View Aurevia →
                     </Button>
@@ -350,7 +350,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
-                  25+
+                  12+
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Research Partnerships
@@ -358,15 +358,15 @@ export default function HomePage() {
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
-                  12
+                  5
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Countries Served
+                  Started Countries
                 </p>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
-                  50K+
+                  5K+
                 </div>
                 <p className="text-sm text-muted-foreground">Lives Touched</p>
               </div>
@@ -407,7 +407,7 @@ export default function HomePage() {
             <Link href="/partner">
               <Button
                 size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
+                className="bg-gradient-to-r from-[#50000B] to-[#50000B]/90 text-[#C2A36A] hover:bg-[#50000B]/100"
               >
                 Begin Partnership Journey
               </Button>
