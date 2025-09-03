@@ -146,7 +146,7 @@ export default function ContactPage() {
                         </label>
                       </div>
 
-                      <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                      <Button type="submit" className="w-full bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/85">
                         Send Message
                       </Button>
                     </form>

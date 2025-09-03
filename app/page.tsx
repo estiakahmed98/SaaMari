@@ -25,7 +25,7 @@ export default function HomePage() {
               <Link href="/philosophy">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="bg-[#50000B] text-[#C2A36A]"
                 >
                   Discover Our Philosophy
                 </Button>
@@ -34,7 +34,7 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                 >
                   Partner With Us
                 </Button>
@@ -65,7 +65,7 @@ export default function HomePage() {
                 <Link href="/philosophy">
                   <Button
                     variant="outline"
-                    className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                    className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                   >
                     Explore Our Philosophy
                   </Button>
@@ -118,7 +118,7 @@ export default function HomePage() {
                   <Link href="/curations/sanovia">
                     <Button
                       variant="ghost"
-                      className="text-accent hover:text-accent-foreground hover:bg-accent"
+                      className="text-[#C2A36A] hover:text-[#C2A36A] hover:bg-[#50000B]"
                     >
                       Discover Sanovia →
                     </Button>
@@ -229,7 +229,7 @@ export default function HomePage() {
                 <Link href="/journals">
                   <Button
                     variant="outline"
-                    className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                    className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                   >
                     Read Our Journals
                   </Button>
@@ -325,7 +325,7 @@ export default function HomePage() {
               <Link href="/leadership">
                 <Button
                   variant="outline"
-                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                 >
                   Meet Our Full Team
                 </Button>
@@ -384,7 +384,7 @@ export default function HomePage() {
               <Link href="/impact">
                 <Button
                   variant="outline"
-                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                 >
                   Explore Our Impact
                 </Button>

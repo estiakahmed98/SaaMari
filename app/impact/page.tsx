@@ -174,7 +174,7 @@ export default function ImpactPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="p-8 text-center hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -277,7 +277,7 @@ export default function ImpactPage() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -305,8 +305,7 @@ export default function ImpactPage() {
                       Leading Medical Institutions
                     </h4>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Partnerships with Mayo Clinic, Stanford Medicine, and
-                      Harvard Medical School for clinical research and
+                      Partnerships Global Medical Schools and Institutes for clinical research and
                       validation.
                     </p>
                   </div>
@@ -348,7 +347,7 @@ export default function ImpactPage() {
               foundation for a future where personalized wellness and luxury
               experiences converge to unlock human potential.
             </p>
-            <Button className="bg-accent text-white hover:bg-accent/90">
+            <Button className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100">
               Partner With Us
             </Button>
           </div>

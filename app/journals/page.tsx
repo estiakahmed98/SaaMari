@@ -60,7 +60,7 @@ export default function JournalsPage() {
                       <span className="text-sm text-muted-foreground">March 15, 2024</span>
                     </div>
                     <Link href="/journals/future-personalized-wellness">
-                      <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Read Full Article</Button>
+                      <Button className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100">Read Full Article</Button>
                     </Link>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export default function JournalsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              <Card className="group hover:shadow-lg transition-all duration-300">  
                 <CardContent className="p-6">
                   <div className="aspect-[4/3] bg-muted rounded-lg mb-4 overflow-hidden">
                     <img
@@ -109,7 +109,7 @@ export default function JournalsPage() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-accent hover:text-accent-foreground hover:bg-accent"
+                        className="text-accent hover:bg-[#50000B] hover:text-[#C2A36A]"
                       >
                         Read More →
                       </Button>
@@ -147,7 +147,7 @@ export default function JournalsPage() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-accent hover:text-accent-foreground hover:bg-accent"
+                        className="text-accent hover:text-[#C2A36A] hover:bg-[#50000B]"
                       >
                         Read More →
                       </Button>
@@ -185,7 +185,7 @@ export default function JournalsPage() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-accent hover:text-accent-foreground hover:bg-accent"
+                        className="text-accent hover:text-[#C2A36A] hover:bg-[#50000B]"
                       >
                         Read More →
                       </Button>
@@ -223,7 +223,7 @@ export default function JournalsPage() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-accent hover:text-accent-foreground hover:bg-accent"
+                        className="text-accent hover:text-[#C2A36A] hover:bg-[#50000B]"
                       >
                         Read More →
                       </Button>
@@ -261,7 +261,7 @@ export default function JournalsPage() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-accent hover:text-accent-foreground hover:bg-accent"
+                        className="text-accent hover:text-[#C2A36A] hover:bg-[#50000B]"
                       >
                         Read More →
                       </Button>
@@ -299,7 +299,7 @@ export default function JournalsPage() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-accent hover:text-accent-foreground hover:bg-accent"
+                        className="text-accent hover:text-[#C2A36A] hover:bg-[#50000B]"
                       >
                         Read More →
                       </Button>
@@ -325,7 +325,7 @@ export default function JournalsPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg border border-muted bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
               />
-              <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Subscribe</Button>
+              <Button className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/90">Subscribe</Button>
             </div>
           </div>
         </section>

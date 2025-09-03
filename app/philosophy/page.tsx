@@ -27,6 +27,23 @@ export default function PhilosophyPage() {
         <section className="py-24 bg-card">
           <div className="container mx-auto max-w-screen-xl px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              {/* Vision */}
+              <div>
+                <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
+                  Our Vision
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Redefining global wellness with trust, science, and human
+                  care.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We aim to become the world’s most trusted platform for health,
+                  wellness, and health‑tech—where science, innovation, and human
+                  care converge to create lasting impact, leaving every life and
+                  community better than we found them.
+                </p>
+              </div>
+
               {/* Mission */}
               <div>
                 <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
@@ -44,23 +61,6 @@ export default function PhilosophyPage() {
                   in body, mind, and spirit, while building a future where
                   health is recognized as both a personal right and a collective
                   responsibility.
-                </p>
-              </div>
-
-              {/* Vision */}
-              <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6 text-balance">
-                  Our Vision
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Redefining global wellness with trust, science, and human
-                  care.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  We aim to become the world’s most trusted platform for health,
-                  wellness, and health‑tech—where science, innovation, and human
-                  care converge to create lasting impact, leaving every life and
-                  community better than we found them.
                 </p>
               </div>
             </div>
@@ -357,7 +357,7 @@ export default function PhilosophyPage() {
               <Link href="/curations">
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100"
                 >
                   Explore Our Curations
                 </Button>
@@ -366,7 +366,7 @@ export default function PhilosophyPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                 >
                   Partner With Us
                 </Button>

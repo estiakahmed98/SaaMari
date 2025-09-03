@@ -29,7 +29,7 @@ export default function SanoviaPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="#products">
-                    <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button size="lg" className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100">
                       Explore Products
                     </Button>
                   </Link>
@@ -37,7 +37,7 @@ export default function SanoviaPage() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                      className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                     >
                       Partner Inquiry
                     </Button>
@@ -169,8 +169,8 @@ export default function SanoviaPage() {
                       Disclaimer: This is a dietary supplement and not intended to diagnose, treat, cure, or prevent any disease or health condition.
                     </p>
                     <div className="flex items-center gap-3 pt-2">
-                      <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Learn More</Button>
-                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">Add to Cart</Button>
+                      <Button className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100">Learn More</Button>
+                      <Button variant="outline" className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent">Add to Cart</Button>
                     </div>
                   </div>
                 </CardContent>
@@ -222,8 +222,8 @@ export default function SanoviaPage() {
                       Disclaimer: This is a dietary supplement and not intended to diagnose, treat, cure, or prevent any disease or health condition.
                     </p>
                     <div className="flex items-center gap-3 pt-2">
-                      <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Learn More</Button>
-                      <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">Add to Cart</Button>
+                      <Button className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100">Learn More</Button>
+                      <Button variant="outline" className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent">Add to Cart</Button>
                     </div>
                   </div>
                 </CardContent>
@@ -241,7 +241,7 @@ export default function SanoviaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/partner">
-                <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Button size="lg" className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100">
                   Partner With Us
                 </Button>
               </Link>
@@ -249,7 +249,7 @@ export default function SanoviaPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  className="border-accent text-accent hover:bg-[#50000B] hover:text-[#C2A36A] bg-transparent"
                 >
                   Request Information
                 </Button>

@@ -1,35 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [mobileCurationsOpen, setMobileCurationsOpen] = useState(false)
-  const pathname = usePathname()
-  const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/")
-  const isSection = (section: string) => pathname.startsWith(section)
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileCurationsOpen, setMobileCurationsOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
+  const isSection = (section: string) => pathname.startsWith(section);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#50000B] text-[#C2A36A]">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4">
         {/* Brand */}
         <Link href="/" className="flex items-center space-x-2">
-          <span className="font-heading text-2xl font-bold tracking-tight">SaaMari</span>
+          <span className="font-heading text-2xl font-bold tracking-tight">
+            Saamari
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 ml-60">
           <Link
             href="/philosophy"
             aria-current={isActive("/philosophy") ? "page" : undefined}
             className={`text-sm font-medium transition-colors ${
-              isActive("/philosophy")
-                ? "text-accent"
-                : "text-foreground/80 hover:text-foreground"
+              isActive("/philosophy") ? "text-white" : "text-inherit"
             }`}
           >
             Philosophy
@@ -39,7 +40,7 @@ export function Header() {
           <div className="relative group">
             <button
               className={`flex items-center gap-1 text-sm font-medium transition-colors ${
-                isSection("/curations") ? "text-accent" : "text-foreground/80 hover:text-foreground"
+                isSection("/curations") ? "text-white" : "text-inherit"
               }`}
               aria-haspopup="true"
               aria-expanded={isSection("/curations")}
@@ -50,33 +51,39 @@ export function Header() {
             <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-200">
               <Link
                 href="/curations/sanovia"
-                aria-current={isActive("/curations/sanovia") ? "page" : undefined}
+                aria-current={
+                  isActive("/curations/sanovia") ? "page" : undefined
+                }
                 className={`block px-4 py-2 text-sm hover:bg-muted ${
                   isActive("/curations/sanovia")
-                    ? "text-accent"
-                    : "text-foreground/80 hover:text-foreground"
+                    ? "bg-[#50000B] text-white"
+                    : "text-inherit"
                 }`}
               >
                 Sanovia
               </Link>
               <Link
                 href="/curations/mediora"
-                aria-current={isActive("/curations/mediora") ? "page" : undefined}
+                aria-current={
+                  isActive("/curations/mediora") ? "page" : undefined
+                }
                 className={`block px-4 py-2 text-sm hover:bg-muted ${
                   isActive("/curations/mediora")
-                    ? "text-accent"
-                    : "text-foreground/80 hover:text-foreground"
+                    ? "bg-[#50000B] text-white"
+                    : "text-inherit"
                 }`}
               >
                 Mediora
               </Link>
               <Link
                 href="/curations/aurevia"
-                aria-current={isActive("/curations/aurevia") ? "page" : undefined}
+                aria-current={
+                  isActive("/curations/aurevia") ? "page" : undefined
+                }
                 className={`block px-4 py-2 text-sm hover:bg-muted ${
                   isActive("/curations/aurevia")
-                    ? "text-accent"
-                    : "text-foreground/80 hover:text-foreground"
+                    ? "bg-[#50000B] text-white"
+                    : "text-inherit"
                 }`}
               >
                 Aurevia
@@ -88,9 +95,7 @@ export function Header() {
             href="/journals"
             aria-current={isActive("/journals") ? "page" : undefined}
             className={`text-sm font-medium transition-colors ${
-              isActive("/journals")
-                ? "text-accent"
-                : "text-foreground/80 hover:text-foreground"
+              isActive("/journals") ? "text-white" : "text-inherit"
             }`}
           >
             Journals
@@ -99,9 +104,7 @@ export function Header() {
             href="/leadership"
             aria-current={isActive("/leadership") ? "page" : undefined}
             className={`text-sm font-medium transition-colors ${
-              isActive("/leadership")
-                ? "text-accent"
-                : "text-foreground/80 hover:text-foreground"
+              isActive("/leadership") ? "text-white" : "text-inherit"
             }`}
           >
             Leadership
@@ -110,9 +113,7 @@ export function Header() {
             href="/impact"
             aria-current={isActive("/impact") ? "page" : undefined}
             className={`text-sm font-medium transition-colors ${
-              isActive("/impact")
-                ? "text-accent"
-                : "text-foreground/80 hover:text-foreground"
+              isActive("/impact") ? "text-white" : "text-inherit"
             }`}
           >
             Impact
@@ -121,9 +122,7 @@ export function Header() {
             href="/contact"
             aria-current={isActive("/contact") ? "page" : undefined}
             className={`text-sm font-medium transition-colors ${
-              isActive("/contact")
-                ? "text-accent"
-                : "text-foreground/80 hover:text-foreground"
+              isActive("/contact") ? "text-white" : "text-inherit"
             }`}
           >
             Contact
@@ -133,20 +132,24 @@ export function Header() {
         {/* Desktop CTA */}
         <Button
           variant="outline"
-          className="hidden md:inline-flex border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+          className="hidden md:inline-flex border-[#C2A36A] text-[#C2A36A] hover:bg-transparent hover:text-[#C2A36A] bg-transparent "
         >
           Your Gateway to Elegance
         </Button>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-foreground/80 hover:text-foreground hover:bg-muted/50 transition"
+          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-[#C2A36A] hover:text-[#C2A36A] hover:bg-muted/50 transition"
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
           onClick={() => setMobileOpen((o) => !o)}
         >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {mobileOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
         </button>
       </div>
 
@@ -162,7 +165,7 @@ export function Header() {
             href="/philosophy"
             aria-current={isActive("/philosophy") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/philosophy") ? "text-accent" : "text-foreground/90"
+              isActive("/philosophy") ? "text-white" : "text-inherit"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -173,14 +176,16 @@ export function Header() {
           <div className="rounded-md">
             <button
               className={`w-full flex items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium hover:bg-muted/60 ${
-                isSection("/curations") ? "text-accent" : "text-foreground/90"
+                isSection("/curations") ? "text-white" : "text-inherit"
               }`}
               aria-expanded={mobileCurationsOpen}
               onClick={() => setMobileCurationsOpen((o) => !o)}
             >
               <span>Curations</span>
               <ChevronDown
-                className={`h-4 w-4 transition-transform ${mobileCurationsOpen ? "rotate-180" : ""}`}
+                className={`h-4 w-4 transition-transform ${
+                  mobileCurationsOpen ? "rotate-180" : ""
+                }`}
               />
             </button>
             <div
@@ -190,9 +195,13 @@ export function Header() {
             >
               <Link
                 href="/curations/sanovia"
-                aria-current={isActive("/curations/sanovia") ? "page" : undefined}
+                aria-current={
+                  isActive("/curations/sanovia") ? "page" : undefined
+                }
                 className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
-                  isActive("/curations/sanovia") ? "text-accent" : "text-foreground/80"
+                  isActive("/curations/sanovia")
+                    ? "bg-[#50000B] text-[#C2A36A]"
+                    : "text-inherit"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -200,9 +209,13 @@ export function Header() {
               </Link>
               <Link
                 href="/curations/mediora"
-                aria-current={isActive("/curations/mediora") ? "page" : undefined}
+                aria-current={
+                  isActive("/curations/mediora") ? "page" : undefined
+                }
                 className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
-                  isActive("/curations/mediora") ? "text-accent" : "text-foreground/80"
+                  isActive("/curations/mediora")
+                    ? "bg-[#50000B] text-[#C2A36A]"
+                    : "text-inherit"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -210,9 +223,13 @@ export function Header() {
               </Link>
               <Link
                 href="/curations/aurevia"
-                aria-current={isActive("/curations/aurevia") ? "page" : undefined}
+                aria-current={
+                  isActive("/curations/aurevia") ? "page" : undefined
+                }
                 className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
-                  isActive("/curations/aurevia") ? "text-accent" : "text-foreground/80"
+                  isActive("/curations/aurevia")
+                    ? "bg-[#50000B] text-[#C2A36A]"
+                    : "text-inherit"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -225,7 +242,7 @@ export function Header() {
             href="/journals"
             aria-current={isActive("/journals") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/journals") ? "text-accent" : "text-foreground/90"
+              isActive("/journals") ? "text-white" : "text-inherit"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -235,7 +252,7 @@ export function Header() {
             href="/leadership"
             aria-current={isActive("/leadership") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/leadership") ? "text-accent" : "text-foreground/90"
+              isActive("/leadership") ? "text-white" : "text-inherit"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -245,7 +262,7 @@ export function Header() {
             href="/impact"
             aria-current={isActive("/impact") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/impact") ? "text-accent" : "text-foreground/90"
+              isActive("/impact") ? "text-white" : "text-inherit"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -255,7 +272,7 @@ export function Header() {
             href="/contact"
             aria-current={isActive("/contact") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/contact") ? "text-accent" : "text-foreground/90"
+              isActive("/contact") ? "text-white" : "text-inherit"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -266,7 +283,7 @@ export function Header() {
           <div className="pt-2">
             <Button
               variant="outline"
-              className="w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+              className="w-full border-[#C2A36A] text-[#C2A36A] hover:bg-transparent hover:text-[#C2A36A] bg-transparent transform transition-all duration-300 hover:-translate-y-1"
               onClick={() => setMobileOpen(false)}
             >
               Your Gateway to Elegance
@@ -275,5 +292,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

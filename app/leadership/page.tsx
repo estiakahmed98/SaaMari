@@ -102,75 +102,6 @@ export default function LeadershipPage() {
                   </div>
                 </CardContent>
               </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-500">
-                <CardContent className="p-8 text-center">
-                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
-                    <img
-                      src="/professional-headshot-wellness-executive.png"
-                      alt="Dr. Amara Okafor"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-2">Dr. Amara Okafor</h3>
-                  <p className="text-accent font-medium mb-4">Chief Medical Officer</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    Former Chief of Preventive Medicine at Mayo Clinic. MD from Johns Hopkins. Board-certified in
-                    Internal Medicine and Preventive Medicine.
-                  </p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Preventive Medicine</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Clinical Excellence</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Patient Care</span>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-500">
-                <CardContent className="p-8 text-center">
-                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
-                    <img
-                      src="/technology-executive-portrait.png"
-                      alt="James Liu"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-2">James Liu</h3>
-                  <p className="text-accent font-medium mb-4">Chief Technology Officer</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    Former Senior Director of Engineering at Apple Health. MS Computer Science, Stanford. Expert in
-                    scalable health platforms and privacy-first architecture.
-                  </p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Platform Engineering</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Privacy & Security</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Innovation</span>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-500">
-                <CardContent className="p-8 text-center">
-                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
-                    <img
-                      src="/luxury-brand-executive-portrait.png"
-                      alt="Isabella Fontaine"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold mb-2">Isabella Fontaine</h3>
-                  <p className="text-accent font-medium mb-4">Chief Experience Officer</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    Former Global Head of Client Experience at Hermès. Master's in Luxury Management, ESSEC. 20+ years
-                    crafting exceptional luxury experiences.
-                  </p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Luxury Experience</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Client Relations</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Brand Excellence</span>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
@@ -233,7 +164,7 @@ export default function LeadershipPage() {
               We're always seeking exceptional talent to join our team of visionaries, scientists, and innovators who
               are reshaping the future of wellness.
             </p>
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Explore Opportunities</Button>
+            <Button className="bg-[#50000B] text-[#C2A36A] hover:bg-[#50000B]/100">Explore Opportunities</Button>
           </div>
         </section>
       </main>
