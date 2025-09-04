@@ -34,24 +34,25 @@ export default function LeadershipPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+
               <Card className="group hover:shadow-xl transition-all duration-500">
                 <CardContent className="p-8 text-center">
                   <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
                     <img
-                      src="/distinguished-leader-health-tech.png"
-                      alt="Dr. Elena Vasquez"
+                      src="/ceo_aan_nahl.jpg"
+                      alt="Aan Nahl"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-2">Dr. Elena Vasquez</h3>
-                  <p className="text-accent font-medium mb-4">Chief Executive Officer & Founder</p>
+                  <h3 className="font-heading text-xl font-semibold mb-2">Aminur Islam </h3>
+                  <p className="text-accent font-medium mb-4">Chairman</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    Former Director of Precision Medicine at Stanford. PhD in Molecular Biology, Harvard. 20+ years
-                    pioneering personalized wellness solutions for high-net-worth individuals.
+                    Providing strategic leadership and stewardship, guiding SaaMari’s growth with a vision rooted in global trade, innovation, and humanitarian excellence.
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Precision Medicine</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Biotechnology</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Global trade</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Innovation</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Humanitarian excellence</span>
                     <span className="px-3 py-1 bg-muted text-xs rounded-full">Leadership</span>
                   </div>
                 </CardContent>
@@ -61,21 +62,20 @@ export default function LeadershipPage() {
                 <CardContent className="p-8 text-center">
                   <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
                     <img
-                      src="/executive-portrait-modern-wellness.png"
-                      alt="Dr. Sarah Chen"
+                      src="/ceo_saamari.jpg"
+                      alt="CEO SaaMari"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-2">Dr. Sarah Chen</h3>
-                  <p className="text-accent font-medium mb-4">Chief Scientific Officer</p>
+                  <h3 className="font-heading text-xl font-semibold mb-2">Hossain Md. Mosarouf</h3>
+                  <p className="text-accent font-medium mb-4">Chief Executive Officer</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    Former Principal Scientist at Google Health. PhD in Computational Biology, MIT. Expert in AI-driven
-                    health analytics and personalized intervention strategies.
+                    Driving strategy and vision with 20+ years of experience in public health, wellness marketing, and technology innovation. to deliver science-driven, innovative, and accessible health and wellness solutions — improving lives worldwide.
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">AI & Machine Learning</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Data Science</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Research</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Wellness marketing</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Technology innovation</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Leadership</span>
                   </div>
                 </CardContent>
               </Card>
@@ -84,21 +84,21 @@ export default function LeadershipPage() {
                 <CardContent className="p-8 text-center">
                   <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
                     <img
-                      src="/executive-portrait.png"
-                      alt="Marcus Rodriguez"
+                      src="/ceo_beod.jpg"
+                      alt="Beod"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-semibold mb-2">Marcus Rodriguez</h3>
-                  <p className="text-accent font-medium mb-4">Chief Strategy Officer</p>
+                  <h3 className="font-heading text-xl font-semibold mb-2">Talat Md. Tawfiq Elahi</h3>
+                  <p className="text-accent font-medium mb-4">Chief Innovation Officer</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    Former VP Strategy at LVMH Wellness Division. MBA from Wharton. 15+ years building luxury wellness
-                    brands and strategic partnerships.
+                    Designing transformative solutions that unite wellness and technology through visionary innovation.
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Luxury Markets</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Strategy</span>
-                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Partnerships</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Unite Wellness</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Technology Innovation</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">AI & Machine Learning</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Research</span>
                   </div>
                 </CardContent>
               </Card>
@@ -112,11 +112,11 @@ export default function LeadershipPage() {
             <div className="mb-16 text-center">
               <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">Advisory Board</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Distinguished advisors providing strategic guidance and industry expertise.
+              Our Advisory Board is composed of leading experts in health, nutrition, and public health who provide strategic insights and guidance to strengthen our mission. With their expertise and integrity, we ensure trusted, evidence-based approaches that promote wellness, innovation, and impact.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 bg-muted rounded-full mx-auto mb-4"> <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-full" src="/David_Kim.png" alt="David Kim" /></div>
@@ -152,7 +152,7 @@ export default function LeadershipPage() {
                   <p className="text-xs text-muted-foreground">Luxury Strategy</p>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
           </div>
         </section>
 

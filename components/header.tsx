@@ -27,7 +27,7 @@ export function Header() {
         {/* Brand */}
         <Link href="/" className="flex items-center space-x-2">
           <span className={`${comfortaa.className} text-2xl font-normal tracking-tight`}>
-            Saamari
+            saamari
           </span>
         </Link>
 
