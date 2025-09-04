@@ -34,7 +34,6 @@ export default function LeadershipPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-
               <Card className="group hover:shadow-xl transition-all duration-500">
                 <CardContent className="p-8 text-center">
                   <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">

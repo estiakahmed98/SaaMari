@@ -253,70 +253,72 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="text-center group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4 overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <Card className="group hover:shadow-xl transition-all duration-500">
+                <CardContent className="p-8 text-center">
+                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
                     <img
-                      src="/executive-portrait.png"
-                      alt="Leadership team member"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      src="/ceo_aan_nahl.jpg"
+                      alt="Aan Nahl"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">
-                    Dr. Sarah Chen
-                  </h3>
-                  <p className="text-sm text-accent mb-3">
-                    Chief Scientific Officer
+                  <h3 className="font-heading text-xl font-semibold mb-2">Aminur Islam </h3>
+                  <p className="text-accent font-medium mb-4">Chairman</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                    Providing strategic leadership and stewardship, guiding SaaMari’s growth with a vision rooted in global trade, innovation, and humanitarian excellence.
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Leading our research initiatives with 15+ years in
-                    biotechnology and personalized medicine.
-                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Global trade</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Innovation</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Humanitarian excellence</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Leadership</span>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="text-center group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4 overflow-hidden">
+              <Card className="group hover:shadow-xl transition-all duration-500">
+                <CardContent className="p-8 text-center">
+                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
                     <img
-                      src="/executive-portrait-modern-wellness.png"
-                      alt="Leadership team member"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      src="/ceo_saamari.jpg"
+                      alt="CEO SaaMari"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">
-                    Marcus Rodriguez
-                  </h3>
-                  <p className="text-sm text-accent mb-3">
-                    Chief Experience Officer
+                  <h3 className="font-heading text-xl font-semibold mb-2">Hossain Md. Mosarouf</h3>
+                  <p className="text-accent font-medium mb-4">Chief Executive Officer</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                    Driving strategy and vision with 20+ years of experience in public health, wellness marketing, and technology innovation. to deliver science-driven, innovative, and accessible health and wellness solutions — improving lives worldwide.
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Crafting luxury experiences that seamlessly integrate
-                    wellness and technology innovation.
-                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Wellness marketing</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Technology innovation</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Leadership</span>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="text-center group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="w-24 h-24 bg-muted rounded-full mx-auto mb-4 overflow-hidden">
+              <Card className="group hover:shadow-xl transition-all duration-500">
+                <CardContent className="p-8 text-center">
+                  <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 overflow-hidden">
                     <img
-                      src="/distinguished-leader-health-tech.png"
-                      alt="Leadership team member"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      src="/ceo_beod.jpg"
+                      alt="Beod"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <h3 className="font-heading text-lg font-semibold mb-2">
-                    Dr. Amara Okafor
-                  </h3>
-                  <p className="text-sm text-accent mb-3">
-                    Chief Innovation Officer
+                  <h3 className="font-heading text-xl font-semibold mb-2">Talat Md. Tawfiq Elahi</h3>
+                  <p className="text-accent font-medium mb-4">Chief Innovation Officer</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                    Designing transformative solutions that unite wellness and technology through visionary innovation.
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Pioneering the future of health-tech with a focus on ethical
-                    innovation and global impact.
-                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Unite Wellness</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Technology Innovation</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">AI & Machine Learning</span>
+                    <span className="px-3 py-1 bg-muted text-xs rounded-full">Research</span>
+                  </div>
                 </CardContent>
               </Card>
             </div>

@@ -163,7 +163,7 @@ export function Header() {
       {/* Mobile panel */}
       <div
         id="mobile-menu"
-        className={`md:hidden border-t border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ${
+        className={`md:hidden border-t border-border/40 bg-white backdrop-blur transition-all duration-200 ${
           mobileOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >
@@ -172,7 +172,7 @@ export function Header() {
             href="/philosophy"
             aria-current={isActive("/philosophy") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/philosophy") ? "text-white" : "text-inherit"
+              isActive("/philosophy") ? "bg-[#50000B] text-[#C2A36A]" : "text-[#50000B]"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -183,7 +183,7 @@ export function Header() {
           <div className="rounded-md">
             <button
               className={`w-full flex items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium hover:bg-muted/60 ${
-                isSection("/curations") ? "text-white" : "text-inherit"
+                isSection("/curations") ? "bg-[#50000B] text-[#C2A36A]" : "text-[#50000B]"
               }`}
               aria-expanded={mobileCurationsOpen}
               onClick={() => setMobileCurationsOpen((o) => !o)}
@@ -208,7 +208,7 @@ export function Header() {
                 className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
                   isActive("/curations/sanovia")
                     ? "bg-[#50000B] text-[#C2A36A]"
-                    : "text-inherit"
+                    : "text-[#50000B]"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -222,7 +222,7 @@ export function Header() {
                 className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
                   isActive("/curations/mediora")
                     ? "bg-[#50000B] text-[#C2A36A]"
-                    : "text-inherit"
+                    : "text-[#50000B]"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -236,7 +236,7 @@ export function Header() {
                 className={`block rounded-md px-3 py-2 text-sm hover:bg-muted/60 ${
                   isActive("/curations/aurevia")
                     ? "bg-[#50000B] text-[#C2A36A]"
-                    : "text-inherit"
+                    : "text-[#50000B]"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -249,7 +249,7 @@ export function Header() {
             href="/journals"
             aria-current={isActive("/journals") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/journals") ? "text-white" : "text-inherit"
+              isActive("/journals") ? "bg-[#50000B] text-[#C2A36A]" : "text-[#50000B]"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -259,7 +259,7 @@ export function Header() {
             href="/leadership"
             aria-current={isActive("/leadership") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/leadership") ? "text-white" : "text-inherit"
+              isActive("/leadership") ? "bg-[#50000B] text-[#C2A36A]" : "text-[#50000B]"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -269,7 +269,7 @@ export function Header() {
             href="/impact"
             aria-current={isActive("/impact") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/impact") ? "text-white" : "text-inherit"
+              isActive("/impact") ? "bg-[#50000B] text-[#C2A36A]" : "text-[#50000B]"
             }`}
             onClick={() => setMobileOpen(false)}
           >
@@ -279,7 +279,7 @@ export function Header() {
             href="/contact"
             aria-current={isActive("/contact") ? "page" : undefined}
             className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/60 ${
-              isActive("/contact") ? "text-white" : "text-inherit"
+              isActive("/contact") ? "bg-[#50000B] text-[#C2A36A]" : "text-[#50000B]"
             }`}
             onClick={() => setMobileOpen(false)}
           >
