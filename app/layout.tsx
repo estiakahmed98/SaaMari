@@ -4,6 +4,7 @@ import { Playfair_Display, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import SplashCursor from "@/components/ui/SplashCursor"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -49,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${playfair.variable} ${poppins.variable} antialiased`}>
+        <SplashCursor />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
