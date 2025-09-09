@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { BackgroundLines } from "@/components/ui/background-lines";
 
 export default function HomePage() {
   return (
@@ -11,7 +12,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-background to-muted/20">
+        <BackgroundLines className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-background to-muted/20">
           <div className="container mx-auto max-w-screen-xl px-4 text-center">
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance mb-6">
               Elevating Health, Wellness & Humanity
@@ -41,7 +42,8 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </section>
+        </BackgroundLines>
+
 
         {/* Philosophy Snapshot */}
         <section className="py-24 bg-card">
@@ -150,7 +152,7 @@ export default function HomePage() {
                       Explore Mediora →
                     </Button>
                   </Link>
-                </CardContent>  
+                </CardContent>
               </Card>
 
               <Card className="group hover:shadow-lg transition-all duration-300">
